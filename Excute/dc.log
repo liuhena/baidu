@@ -1,0 +1,450 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version L-2016.03 for linux64 - Feb 17, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/train/liuhena/.synopsys_dv_prefs.tcl
+#//wing information you should confirm and change to your current value
+set TOP_DESIGN  Excute
+Excute
+set CLK         clk
+clk
+set LIB         "ss_1v62_125c"
+ss_1v62_125c
+set RTL_LIST    {/home/train/liuhena/Shuzixitong/Excute/Excute.v}
+/home/train/liuhena/Shuzixitong/Excute/Excute.v
+set CURRENT_DIRECTORY  {/home/train/liuhena/Shuzixitong/Excute}
+/home/train/liuhena/Shuzixitong/Excute
+#---------------------------------------------------------------------------#
+#The following information is DC environment, Please do not change unless the instructions.
+sh rm -rf report
+sh mkdir report
+set search_path "  /eda/synopsys/dc_2016/libraries/syn/                   /home/train/share_library/smic018_library/smic18_sc-metro-v10_2005q4v1/aci/synopsys                   /home/train/share_library/smic018_library/SMIC_IO_SP018_v1.5/SP018_V1p5_otherDK/syn                     /home/train/yechen/dc_16 "
+  /eda/synopsys/dc_2016/libraries/syn/                   /home/train/share_library/smic018_library/smic18_sc-metro-v10_2005q4v1/aci/synopsys                   /home/train/share_library/smic018_library/SMIC_IO_SP018_v1.5/SP018_V1p5_otherDK/syn                     /home/train/yechen/dc_16 
+set target_library      " ss_1v62_125c.db "
+ ss_1v62_125c.db 
+set synthetic_library   "dw_foundation.sldb  standard.sldb"
+dw_foundation.sldb  standard.sldb
+set link_library        "* ss_1v62_125c.db    $synthetic_library      SP018_V1p4_max.db"
+* ss_1v62_125c.db    dw_foundation.sldb  standard.sldb      SP018_V1p4_max.db
+set symbol_library      "smic18m.sdb"
+smic18m.sdb
+set hdlin_unsigned_integers {true}
+true
+set compile_preserve_subdesign_interfaces {true}
+true
+set compile_delete_unloaded_sequential_cells false
+false
+set verilogout_no_tri {true}
+true
+set physopt_fix_multiple_port_nets true
+true
+set pdefin_use_nameprefix false
+false
+set compile_seqmap_propagate_constants false
+false
+#---------------------------------------------------------------------------#
+analyze -format verilog $RTL_LIST
+Running PRESTO HDLC
+Compiling source file /home/train/liuhena/Shuzixitong/Excute/Excute.v
+Warning:  /home/train/liuhena/Shuzixitong/Excute/Excute.v:11: Redeclaration of port 'AluResult'. (VER-331)
+Warning:  /home/train/liuhena/Shuzixitong/Excute/Excute.v:12: Redeclaration of port 'BjBus'. (VER-331)
+Presto compilation completed successfully.
+Loading db file '/home/train/share_library/smic018_library/smic18_sc-metro-v10_2005q4v1/aci/synopsys/ss_1v62_125c.db'
+Loading db file '/eda/synopsys/dc_2016/libraries/syn/dw_foundation.sldb'
+Loading db file '/eda/synopsys/dc_2016/libraries/syn/standard.sldb'
+Loading db file '/home/train/share_library/smic018_library/SMIC_IO_SP018_v1.5/SP018_V1p5_otherDK/syn/SP018_V1p4_max.db'
+1
+elaborate $TOP_DESIGN
+Loading db file '/eda/synopsys/dc_2016/libraries/syn/gtech.db'
+  Loading link library 'ss_1v62_125c'
+  Loading link library 'SP018_V1p4_max'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 16 in file
+	'/home/train/liuhena/Shuzixitong/Excute/Excute.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            17            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'Excute'.
+1
+current_design  $TOP_DESIGN
+Current design is 'Excute'.
+{Excute}
+uniquify
+1
+link
+
+  Linking design 'Excute'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  Excute                      /home/train/liuhena/Shuzixitong/Excute/Excute.db
+  ss_1v62_125c (library)      /home/train/share_library/smic018_library/smic18_sc-metro-v10_2005q4v1/aci/synopsys/ss_1v62_125c.db
+  dw_foundation.sldb (library) /eda/synopsys/dc_2016/libraries/syn/dw_foundation.sldb
+  SP018_V1p4_max (library)    /home/train/share_library/smic018_library/SMIC_IO_SP018_v1.5/SP018_V1p5_otherDK/syn/SP018_V1p4_max.db
+
+1
+set_operating_conditions -library ss_1v62_125c
+Removing min operating conditions from design 'Excute'
+Removing max operating conditions from design 'Excute'
+1
+create_clock -period 10 -name $CLK 
+Warning: Creating virtual clock named 'clk' with no sources. (UID-348)
+1
+set_input_delay  6 -clock $CLK  [all_inputs]
+1
+set_output_delay       6  -clock $CLK -max [all_outputs]
+1
+#set_clock_transition    0.5     [get_clocks $CLK]
+#set_dont_touch_network          [get_clocks $CLK]
+#set_ideal_network               [get_clocks $CLK]
+set_clock_latency       0.2     [get_clocks $CLK]
+1
+set_clock_uncertainty   0.3     [get_clocks $CLK]
+1
+set_load -pin_load      0.5     [ all_outputs ]
+1
+set_max_area            0.0
+1
+set_critical_range      0.5     [current_design]
+Current design is 'Excute'.
+1
+set_max_transition      0.5     [current_design]
+Current design is 'Excute'.
+1
+set_max_fanout          20       [current_design]
+Current design is 'Excute'.
+1
+set verilogout_no_tri true
+true
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_multiple_port_nets -feedthrough
+1
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | L-2016.03-DWBB_201603.0 |     *     |
+| Licensed DW Building Blocks        | L-2016.03-DWBB_201603.0 |     *     |
+============================================================================
+
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Excute'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'DW_leftsh'
+Information: Added key list 'DesignWare' to design 'Excute'. (DDB-72)
+  Processing 'Excute_DW01_add_0'
+  Processing 'Excute_DW01_add_1'
+  Mapping 'Excute_DW_cmp_0'
+  Processing 'Excute_DW01_add_2'
+  Processing 'Excute_DW01_add_3'
+  Mapping 'Excute_DW_mult_uns_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: compile falsified 128 infeasible paths. (OPT-1720)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06   56155.4      5.45     339.5       2.9                          
+    0:00:06   56155.4      5.45     339.5       2.9                          
+    0:00:06   56155.4      5.45     339.5       2.9                          
+    0:00:06   56155.4      5.45     339.5       2.9                          
+    0:00:06   56155.4      5.45     339.5       2.9                          
+    0:00:08   28342.2      5.88     353.4       0.7                          
+    0:00:09   26377.5      5.91     360.7       0.5                          
+    0:00:09   26107.5      5.90     358.3       0.5                          
+    0:00:09   26048.2      5.96     363.2       0.5                          
+    0:00:09   25975.8      5.99     364.4       0.5                          
+    0:00:09   26057.0      5.80     358.4       0.5                          
+    0:00:10   26019.7      5.81     359.3       0.5                          
+    0:00:10   26026.3      5.78     359.5       0.5                          
+    0:00:10   25971.4      5.78     359.0       0.5                          
+    0:00:10   25986.8      5.78     359.6       0.5                          
+    0:00:10   25999.9      5.75     356.3       0.5                          
+    0:00:10   26087.8      5.75     356.1       0.5                          
+    0:00:10   26087.8      5.75     356.1       0.5                          
+    0:00:10   26087.8      5.75     356.1       0.5                          
+    0:00:10   26087.8      5.75     356.1       0.5                          
+    0:00:10   26184.3      5.74     356.0       0.0                          
+    0:00:10   26184.3      5.74     356.0       0.0                          
+    0:00:10   26184.3      5.74     356.0       0.0                          
+    0:00:10   26184.3      5.74     356.0       0.0                          
+    0:00:10   26897.8      5.54     349.4       0.2                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10   26897.8      5.54     349.4       0.2                          
+    0:00:11   26965.8      5.49     346.9       0.2 AluResult[30]            
+    0:00:11   27174.4      5.39     340.9       0.3 AluResult[30]            
+    0:00:11   27005.4      5.35     338.5       0.3 AluResult[30]            
+    0:00:11   26950.5      5.34     338.0       0.8 AluResult[30]            
+    0:00:11   26957.1      5.34     337.6       0.8 AluResult[30]            
+    0:00:12   27003.2      5.33     337.4       0.8 AluResult[30]            
+    0:00:12   26957.1      5.32     336.5       0.9 AluResult[30]            
+    0:00:12   27176.6      5.28     333.9       3.0 AluResult[26]            
+    0:00:12   27279.8      5.27     333.3       3.1 AluResult[30]            
+    0:00:12   27339.0      5.26     332.8       3.2 AluResult[26]            
+    0:00:13   27347.8      5.25     332.0       2.8 AluResult[30]            
+    0:00:13   27341.2      5.24     331.8       2.8 AluResult[25]            
+    0:00:13   27365.4      5.24     331.7       2.8 AluResult[10]            
+    0:00:13   27494.9      5.24     331.5       2.8 AluResult[25]            
+    0:00:13   27435.6      5.23     331.5       2.8 AluResult[25]            
+    0:00:13   27341.2      5.23     331.3       2.8 AluResult[25]            
+    0:00:13   27367.6      5.22     330.8       2.8 AluResult[25]            
+    0:00:14   27466.3      5.22     330.8       2.8 AluResult[30]            
+    0:00:14   27492.7      5.22     330.7       2.8 AluResult[30]            
+    0:00:14   27705.6      5.21     330.2       2.8 AluResult[30]            
+    0:00:14   27822.0      5.20     329.7       2.8 AluResult[30]            
+    0:00:14   27857.1      5.20     329.5       2.8 AluResult[30]            
+    0:00:14   27857.1      5.20     329.4       2.8 AluResult[30]            
+    0:00:14   27901.0      5.19     329.0       2.8 AluResult[30]            
+    0:00:14   27927.3      5.19     328.9       2.8 AluResult[25]            
+    0:00:15   27940.5      5.19     329.2       2.8 BjBus[15]                
+    0:00:15   27949.3      5.19     329.1       2.8 AluResult[25]            
+    0:00:15   28124.9      5.19     329.0       2.8 AluResult[25]            
+    0:00:15   28061.2      5.19     329.0       2.8 AluResult[25]            
+    0:00:15   28023.9      5.19     328.8       2.8 AluResult[25]            
+    0:00:16   28015.1      5.19     328.8       2.8 AluResult[25]            
+    0:00:16   28010.8      5.18     328.8       2.8 AluResult[30]            
+    0:00:16   28032.7      5.18     328.8       2.8 AluResult[30]            
+    0:00:16   28017.3      5.18     328.5       2.8 AluResult[25]            
+    0:00:16   28015.1      5.18     328.6       2.8 AluResult[30]            
+    0:00:16   28037.1      5.18     328.5       2.8 AluResult[30]            
+    0:00:17   28037.1      5.18     328.5       2.8 BjBus[28]                
+    0:00:17   28026.1      5.18     328.5       2.8 AluResult[30]            
+    0:00:18   28063.4      5.17     328.1       2.8 BjBus[14]                
+    0:00:18   28078.8      5.17     328.1       2.8                          
+    0:00:18   28078.8      5.17     328.1       2.8                          
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:18   28078.8      5.17     328.1       2.8                          
+    0:00:19   28175.4      5.16     327.9       0.2 BjBus[30]                
+    0:00:19   28190.8      5.16     327.7       0.2 BjBus[30]                
+    0:00:19   28236.9      5.16     327.4       0.2 BjBus[30]                
+    0:00:19   28272.0      5.15     327.4       0.2 BjBus[30]                
+    0:00:19   28280.8      5.15     327.2       0.2 BjBus[30]                
+    0:00:19   28267.6      5.15     327.2       0.2 BjBus[30]                
+    0:00:20   28291.7      5.15     327.0       0.2 BjBus[30]                
+    0:00:20   28348.8      5.15     327.0       0.2 BjBus[26]                
+    0:00:20   28528.8      5.13     326.5       0.0 BjBus[28]                
+    0:00:21   28621.0      5.12     325.8       0.0 AluResult[14]            
+    0:00:21   28636.4      5.12     325.6       0.0 AluResult[27]            
+    0:00:21   28658.3      5.12     325.6       0.0 AluResult[6]             
+    0:00:21   28651.8      5.11     325.5       0.0 BjBus[27]                
+    0:00:21   28649.6      5.11     325.5       0.0 AluResult[13]            
+    0:00:21   28695.7      5.11     325.4       0.0 BjBus[17]                
+    0:00:22   28748.3      5.11     325.4       0.0 AluResult[27]            
+    0:00:22   28765.9      5.11     325.4       0.0 AluResult[27]            
+    0:00:22   28831.8      5.10     325.2       0.0 AluResult[11]            
+    0:00:22   28829.6      5.10     325.2       0.0 AluResult[14]            
+    0:00:22   28779.1      5.10     325.1       0.0 AluResult[22]            
+    0:00:22   28774.7      5.10     325.1       0.0 AluResult[14]            
+    0:00:22   28853.7      5.10     325.1       0.0 AluResult[14]            
+    0:00:23   28853.7      5.10     325.1       0.0 AluResult[14]            
+    0:00:23   28829.6      5.10     325.1       0.0 AluResult[14]            
+    0:00:23   28823.0      5.10     325.0       0.0 AluResult[17]            
+    0:00:23   28812.0      5.10     325.1       0.0 AluResult[14]            
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:24   28812.0      5.10     325.1       0.0                          
+    0:00:24   28816.4      5.10     325.0       0.0                          
+    0:00:24   28823.0      5.10     325.0       0.0                          
+    0:00:24   28998.6      5.10     325.0       0.0                          
+    0:00:24   28996.4      5.10     324.9       0.0                          
+    0:00:24   29007.4      5.10     324.9       0.0                          
+    0:00:24   28976.6      5.10     324.8       0.0                          
+    0:00:24   29018.3      5.10     324.6       0.0                          
+    0:00:24   29016.2      5.10     324.4       0.0                          
+    0:00:25   29090.8      5.10     324.3       0.0                          
+    0:00:25   29097.4      5.10     324.3       0.0                          
+    0:00:25   29143.5      5.10     324.2       0.0                          
+    0:00:25   29152.3      5.10     324.0       0.0                          
+    0:00:25   29246.6      5.10     323.8       0.0                          
+    0:00:25   29354.2      5.10     323.8       0.0                          
+    0:00:25   29415.7      5.10     323.3       0.0                          
+    0:00:25   29485.9      5.10     323.2       0.0                          
+    0:00:26   29510.1      5.10     323.0       0.0                          
+    0:00:26   29551.8      5.10     322.6       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:26   29551.8      5.10     322.6       0.0                          
+    0:00:26   29551.8      5.10     322.6       0.0                          
+    0:00:26   29288.4      5.10     322.6       0.0                          
+    0:00:26   29130.3      5.10     322.6       0.0                          
+    0:00:26   29005.2      5.10     322.5       0.0                          
+    0:00:26   28954.7      5.10     322.5       0.0                          
+    0:00:26   28948.1      5.10     322.5       0.0                          
+    0:00:26   28948.1      5.10     322.5       0.0                          
+    0:00:26   28948.1      5.10     322.5       0.0                          
+    0:00:26   28375.2      5.10     323.0       0.0                          
+    0:00:26   28116.1      5.10     323.1       0.0                          
+    0:00:26   28100.8      5.10     323.1       0.0                          
+    0:00:26   28100.8      5.10     323.1       0.0                          
+    0:00:26   28100.8      5.10     323.1       0.0                          
+    0:00:26   28100.8      5.10     323.1       0.0                          
+    0:00:26   28100.8      5.10     323.1       0.0                          
+    0:00:26   28100.8      5.10     323.1       0.0                          
+    0:00:26   28138.1      5.10     323.1       0.0 BjBus[23]                
+    0:00:26   28315.9      5.09     323.1       0.0 BjBus[27]                
+    0:00:27   28280.8      5.09     323.0       0.0                          
+    0:00:27   28239.1      5.09     323.0       0.0                          
+    0:00:27   28127.1      5.09     323.0       0.0                          
+    0:00:27   28008.6      5.09     322.9       0.0                          
+    0:00:27   27986.6      5.09     322.9       0.0                          
+    0:00:27   27819.8      5.09     322.8       0.0                          
+    0:00:27   27749.5      5.09     322.8       0.0                          
+    0:00:27   27749.5      5.09     322.8       0.0                          
+    0:00:27   27749.5      5.09     322.8       0.0                          
+    0:00:27   27749.5      5.09     322.8       0.0                          
+    0:00:27   27749.5      5.09     322.8       0.0                          
+    0:00:27   27749.5      5.09     322.8       0.0                          
+    0:00:28   27749.5      5.09     322.8       0.0 AluResult[14]            
+    0:00:28   27762.7      5.09     322.8       0.0 BjBus[27]                
+    0:00:28   27762.7      5.09     322.8       0.0 AluResult[17]            
+    0:00:28   27762.7      5.09     322.8       0.0 AluResult[17]            
+    0:00:29   27782.5      5.09     322.8       0.0 AluResult[17]            
+    0:00:29   27782.5      5.09     322.8       0.0 AluResult[17]            
+    0:00:29   27782.5      5.09     323.0       0.0 AluResult[17]            
+    0:00:30   27784.6      5.09     322.9       0.0 AluResult[17]            
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:30   27784.6      5.09     322.9       0.0                          
+    0:00:30   27784.6      5.09     322.9       0.0                          
+    0:00:30   27771.5      5.09     322.9       0.0                          
+    0:00:31   27771.5      5.09     322.9       0.0                          
+    0:00:31   27769.3      5.09     322.9       0.0                          
+    0:00:31   27773.7      5.09     322.9       0.0                          
+    0:00:31   27773.7      5.09     322.9       0.0                          
+    0:00:31   27778.1      5.09     322.8       0.0                          
+    0:00:31   27795.6      5.09     322.8       0.0                          
+    0:00:32   27806.6      5.09     322.7       0.0                          
+    0:00:32   27835.1      5.09     322.3       0.0                          
+    0:00:32   27854.9      5.09     322.2       0.0                          
+    0:00:32   27848.3      5.09     322.2       0.0 AluResult[17]            
+Loading db file '/home/train/share_library/smic018_library/smic18_sc-metro-v10_2005q4v1/aci/synopsys/ss_1v62_125c.db'
+Loading db file '/home/train/share_library/smic018_library/SMIC_IO_SP018_v1.5/SP018_V1p5_otherDK/syn/SP018_V1p4_max.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+set verilogout_no_tri true
+true
+change_names -rules verilog -hier
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_multiple_port_nets -feedthrough
+1
+#--------------------------------q-------------------------------------------#
+#--:write the DC result to report file!
+write -f verilog    -hierarchy -output      ./report/multiplication4_4.v
+Writing verilog file '/home/train/liuhena/Shuzixitong/Excute/report/multiplication4_4.v'.
+1
+write -f ddc        -hierarchy -output      ./report/multiplication4_4.ddc
+Writing ddc file './report/multiplication4_4.ddc'.
+1
+write_sdc                                   ./report/multiplication4_4.sdc
+1
+write_sdf                                   ./report/multiplication4_4.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/train/liuhena/Shuzixitong/Excute/report/multiplication4_4.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+report_timing   -sort_by slack -nets -cap -transition -sig 5 -input_pins -delay max -max_paths 200 > ./report/multiplication4_4.timing
+report_area     -hier                   > ./report/multiplication4_4.area
+report_constraint       -all_violators  > ./report/multiplication4_4.vio
+report_qor                              > ./report/multiplication4_4.qor
+report_cell                             > ./report/multiplication4_4.cell
+report_power                            > ./report/multiplication4_4.power
+check_design                            > ./report/rpt.problem
+dc_shell> tar[K[K[Kstart-[K_gui
+dc_shell> Current design is 'Excute'.
+4.1
+Current design is 'Excute'.
+dc_shell> Loading db file '/eda/synopsys/dc_2016/libraries/syn/generic.sdb'
+dc_shell> exit
+
+Memory usage for main task 204 Mbytes.
+Memory usage for this session 204 Mbytes.
+CPU usage for this session 42 seconds ( 0.01 hours ).
+
+Thank you...
