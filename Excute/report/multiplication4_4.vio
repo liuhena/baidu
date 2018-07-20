@@ -1,0 +1,92 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : Excute
+Version: L-2016.03
+Date   : Tue Apr 17 16:46:53 2018
+****************************************
+
+
+   max_delay/setup ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   AluResult[17]                3.90           8.99 r        -5.09  (VIOLATED)
+   AluResult[14]                3.90           8.99 f        -5.09  (VIOLATED)
+   BjBus[27]                    3.90           8.99 f        -5.09  (VIOLATED)
+   BjBus[28]                    3.90           8.99 f        -5.09  (VIOLATED)
+   AluResult[15]                3.90           8.99 r        -5.09  (VIOLATED)
+   AluResult[27]                3.90           8.99 f        -5.09  (VIOLATED)
+   BjBus[30]                    3.90           8.99 f        -5.09  (VIOLATED)
+   AluResult[9]                 3.90           8.98 r        -5.08  (VIOLATED)
+   AluResult[21]                3.90           8.98 r        -5.08  (VIOLATED)
+   BjBus[25]                    3.90           8.98 f        -5.08  (VIOLATED)
+   AluResult[5]                 3.90           8.98 f        -5.08  (VIOLATED)
+   AluResult[11]                3.90           8.98 f        -5.08  (VIOLATED)
+   BjBus[29]                    3.90           8.98 f        -5.08  (VIOLATED)
+   AluResult[22]                3.90           8.98 f        -5.08  (VIOLATED)
+   BjBus[17]                    3.90           8.98 r        -5.08  (VIOLATED)
+   BjBus[31]                    3.90           8.98 f        -5.08  (VIOLATED)
+   AluResult[16]                3.90           8.97 f        -5.07  (VIOLATED)
+   AluResult[10]                3.90           8.97 r        -5.07  (VIOLATED)
+   AluResult[28]                3.90           8.97 r        -5.07  (VIOLATED)
+   AluResult[6]                 3.90           8.97 f        -5.07  (VIOLATED)
+   AluResult[29]                3.90           8.96 r        -5.06  (VIOLATED)
+   AluResult[25]                3.90           8.96 r        -5.06  (VIOLATED)
+   AluResult[30]                3.90           8.96 r        -5.06  (VIOLATED)
+   AluResult[31]                3.90           8.96 r        -5.06  (VIOLATED)
+   BjBus[26]                    3.90           8.96 r        -5.06  (VIOLATED)
+   AluResult[13]                3.90           8.95 r        -5.05  (VIOLATED)
+   BjBus[15]                    3.90           8.95 r        -5.05  (VIOLATED)
+   BjBus[23]                    3.90           8.95 r        -5.05  (VIOLATED)
+   AluResult[18]                3.90           8.95 f        -5.05  (VIOLATED)
+   BjBus[14]                    3.90           8.95 f        -5.05  (VIOLATED)
+   BjBus[24]                    3.90           8.95 f        -5.05  (VIOLATED)
+   BjBus[20]                    3.90           8.95 f        -5.05  (VIOLATED)
+   AluResult[12]                3.90           8.95 f        -5.05  (VIOLATED)
+   AluResult[24]                3.90           8.95 f        -5.05  (VIOLATED)
+   BjBus[19]                    3.90           8.94 f        -5.04  (VIOLATED)
+   AluResult[8]                 3.90           8.94 r        -5.04  (VIOLATED)
+   AluResult[7]                 3.90           8.93 f        -5.03  (VIOLATED)
+   AluResult[19]                3.90           8.93 r        -5.03  (VIOLATED)
+   BjBus[21]                    3.90           8.93 r        -5.03  (VIOLATED)
+   BjBus[11]                    3.90           8.93 r        -5.03  (VIOLATED)
+   BjBus[22]                    3.90           8.93 f        -5.03  (VIOLATED)
+   AluResult[26]                3.90           8.93 r        -5.03  (VIOLATED)
+   AluResult[20]                3.90           8.92 f        -5.02  (VIOLATED)
+   BjBus[13]                    3.90           8.92 f        -5.02  (VIOLATED)
+   AluResult[23]                3.90           8.92 r        -5.02  (VIOLATED)
+   BjBus[16]                    3.90           8.91 r        -5.01  (VIOLATED)
+   BjBus[18]                    3.90           8.90 f        -5.00  (VIOLATED)
+   BjBus[10]                    3.90           8.90 r        -5.00  (VIOLATED)
+   AluResult[4]                 3.90           8.88 f        -4.98  (VIOLATED)
+   BjBus[9]                     3.90           8.88 r        -4.98  (VIOLATED)
+   BjBus[7]                     3.90           8.85 f        -4.95  (VIOLATED)
+   BjBus[5]                     3.90           8.85 r        -4.95  (VIOLATED)
+   AluResult[3]                 3.90           8.83 f        -4.93  (VIOLATED)
+   BjBus[6]                     3.90           8.83 r        -4.93  (VIOLATED)
+   BjBus[12]                    3.90           8.80 r        -4.90  (VIOLATED)
+   BjBus[8]                     3.90           8.76 f        -4.86  (VIOLATED)
+   AluResult[2]                 3.90           8.72 f        -4.82  (VIOLATED)
+   BjBus[3]                     3.90           8.65 f        -4.75  (VIOLATED)
+   BjBus[4]                     3.90           8.60 f        -4.70  (VIOLATED)
+   AluResult[1]                 3.90           8.56 r        -4.66  (VIOLATED)
+   AluResult[0]                 3.90           8.49 f        -4.59  (VIOLATED)
+   BjBus[2]                     3.90           8.47 r        -4.57  (VIOLATED)
+   BjBus[1]                     3.90           8.43 r        -4.53  (VIOLATED)
+   BjBus[0]                     3.90           8.35 r        -4.45  (VIOLATED)
+   BjBus[32]                    3.90           6.80 f        -2.90  (VIOLATED)
+
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   Excute                       0.00       27848.31       -27848.31 (VIOLATED)
+
+
+1

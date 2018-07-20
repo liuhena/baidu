@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : area
+Design : Excute
+Version: L-2016.03
+Date   : Tue Apr 17 16:46:53 2018
+****************************************
+
+Library(s) Used:
+
+    ss_1v62_125c (File: /home/train/share_library/smic018_library/smic18_sc-metro-v10_2005q4v1/aci/synopsys/ss_1v62_125c.db)
+
+Number of ports:                          691
+Number of nets:                          2386
+Number of cells:                         1811
+Number of combinational cells:           1797
+Number of sequential cells:                 8
+Number of macros/black boxes:               0
+Number of buf/inv:                        471
+Number of references:                     113
+
+Combinational area:              27848.306921
+Buf/Inv area:                     7863.206415
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 27848.306921
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  --------------------
+Excute                            27848.3069    100.0  10574.2783     0.0000  0.0000  Excute
+add_18                             3347.6799     12.0   3347.6799     0.0000  0.0000  Excute_DW01_add_5
+add_19_aco                         4131.3663     14.8   4131.3663     0.0000  0.0000  Excute_DW01_add_8
+add_20                             3365.2415     12.1   3365.2415     0.0000  0.0000  Excute_DW01_add_6
+add_20_S2                          1552.0064      5.6   1552.0064     0.0000  0.0000  Excute_DW01_add_7
+lt_19                              3960.1408     14.2   3960.1408     0.0000  0.0000  Excute_DW_cmp_1
+mult_add_19_aco                     917.5936      3.3    917.5936     0.0000  0.0000  Excute_DW_mult_uns_2
+--------------------------------  ----------  -------  ----------  ---------  ------  --------------------
+Total                                                  27848.3069     0.0000  0.0000
+
+1

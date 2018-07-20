@@ -1,0 +1,97 @@
+0 
+41
++itf+/eda/synopsys/vcs_2015/linux64/lib/vcsdp.tab
++lint=PCWM
++lint=TFIPC-L
++memcbk
++nospecify
++notimingcheck
++v2k
++vcsd
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/eda/synopsys/vcs_2015/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /eda/synopsys/vcs_2015/linux64/lib/libvirsim.so /eda/synopsys/vcs_2015/linux64/lib/liberrorinf.so /eda/synopsys/vcs_2015/linux64/lib/libsnpsmalloc.so /eda/synopsys/verdi_2016/share/PLI/VCS/LINUX64/pli.a
+-Mout=simv
+-Msaverestoreobj=/eda/synopsys/vcs_2015/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl -lm
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/eda/synopsys/vcs_2015/include
+-P
+-Xpiyushb1=0x80
+-Xvcs_run_simv=1
+-debug_access+all+dmptf+bc
+-debug_access+class+driver+dmptf+bc
+-debug_region=cell+lib
+-debug_region=cell+lib
+-full64
+-gen_obj
+-l
+-picarchive
+-sverilog
+/eda/synopsys/vcs_2015/linux64/bin/vcs1
+/eda/synopsys/verdi_2016/share/PLI/VCS/LINUX64/novas.tab
+command.log
+tb.v
+41
+sysc_uni_pwd=/home/train/liuhena/Shuzixitong/Excute
+XILINX_VIVADO=/home/EDA/Xilinx/Vivado/2017.4
+VMR_MODE_FLAG=64
+VERDI_HOME=/eda/synopsys/verdi_2016
+VERDI_FSDB=/eda/synopsys/verdi_2016/share/PLI/VCS/LINUX64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=command.log
+VCS_HOME=/eda/synopsys/vcs_2015
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/eda/synopsys/vcs_2015/linux64
+TCL_LIBRARY=:/home/ns2/ns-allinone-2.35/tcl8.5.10/library
+SYSTEMC_HOME=/eda/systemc_2.3.1
+SYNPLIFY_HOME=/home/EDA/synopsys/synplify_201503
+SVNPATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/eda/svn/bin
+SSH_TTY=/dev/pts/38
+SSH_CONNECTION=10.101.101.74 50111 219.244.80.6 22
+SSH_CLIENT=10.101.101.74 50111 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SPYGLASS_HOME=/eda/synopsys/spyglass_2016/SpyGlass-L2016.06/SPYGLASS_HOME/
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/opt/qtsdk-2010.02/qt
+OVA_UUM=0
+LESSOPEN=|/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KDEDIRS=/usr
+HISTCONTROL=ignoredups
+G_BROKEN_FILENAMES=1
+GNUPLOT=/usr/local/gnuplot
+DVE_HOME=/eda/synopsys/vcs_2015/gui/dve
+CVS_RSH=ssh
+0
+4
+1523954439 Excute.v
+1523953009 tb.v
+1468145700 /eda/synopsys/verdi_2016/share/PLI/VCS/LINUX64/novas.tab
+1461294303 /eda/synopsys/vcs_2015/linux64/lib/vcsdp.tab
+5
+0 
+1461296522 /eda/synopsys/vcs_2015/linux64/lib/libvirsim.so
+1461296141 /eda/synopsys/vcs_2015/linux64/lib/liberrorinf.so
+1461296124 /eda/synopsys/vcs_2015/linux64/lib/libsnpsmalloc.so
+1468144468 /eda/synopsys/verdi_2016/share/PLI/VCS/LINUX64/pli.a

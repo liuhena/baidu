@@ -1,0 +1,84 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : qor
+Design : Excute
+Version: L-2016.03
+Date   : Tue Apr 17 16:46:53 2018
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              21.00
+  Critical Path Length:          2.79
+  Critical Path Slack:          -5.09
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:       -322.16
+  No. of Violating Paths:       65.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          6
+  Hierarchical Port Count:        527
+  Leaf Cell Count:               1797
+  Buf/Inv Cell Count:             471
+  Buf Cell Count:                  41
+  Inv Cell Count:                 430
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      1797
+  Sequential Cell Count:            0
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    27848.306921
+  Noncombinational Area:     0.000000
+  Buf/Inv Area:           7863.206415
+  Total Buffer Area:          1240.29
+  Total Inverter Area:        6622.92
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:             27848.306921
+  Design Area:           27848.306921
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          1904
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: fpga
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.77
+  Logic Optimization:                  4.34
+  Mapping Optimization:               26.97
+  -----------------------------------------
+  Overall Compile Time:               33.61
+  Overall Compile Wall Clock Time:    34.37
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 5.09  TNS: 322.16  Number of Violating Paths: 65
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

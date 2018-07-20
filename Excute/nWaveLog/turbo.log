@@ -1,0 +1,3 @@
+Command Line: /eda/synopsys/verdi_2016/platform/LINUXAMD64/bin/Novas -nWave -ssf tb.fsdb
+uname(Linux fpga 2.6.32-71.el6.x86_64 #1 SMP Fri May 20 03:51:51 BST 2011 x86_64)
+au time 39.219621 2.011694 1.078836 delta 240607232 240607232 total 617553920 617553920

@@ -1,0 +1,6 @@
+vcs \
+-full64 -debug_all -I -R -sverilog +lint=TFIPC-L +lint=PCWM +v2k \
+-P $VERDI_FSDB/novas.tab $VERDI_FSDB/pli.a   \
++nospecify +notimingcheck \
+-l command.log \
+tb.v

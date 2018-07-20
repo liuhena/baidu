@@ -1,0 +1,18 @@
+{
+    "reusePaths": {},
+    "Modules": {
+        "...MASTER...": {},
+        "tb": {},
+        "std": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "checksum": 4294967295,
+            "mod": "...MASTER...",
+            "bytes": 7460,
+            "out": "objs/amcQw_d.o",
+            "mode": 4
+        }
+    },
+    "ObjArchives": []
+}
